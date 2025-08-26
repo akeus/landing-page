@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:miguel-ake-landing": "node dist/miguel-ake-landing/server/server.mjs"
+    "serve:ssr": "node dist/miguel-ake-landing/server/server.mjs"
   },
   "private": true,
   "dependencies": {
