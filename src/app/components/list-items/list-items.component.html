@@ -1,19 +1,19 @@
 @switch (type) {
-  @case (ListType.Ordered) {
-    <ng-container *ngTemplateOutlet="ordered; context: { items: items }"></ng-container>
-  }
-  @case (ListType.Unordered) {
-    <ng-container *ngTemplateOutlet="unordered; context: { items: items }"></ng-container>
-  }
-  @default {
-    <p>No type</p>
-  }
+@case (ListType.Ordered) {
+<ng-container *ngTemplateOutlet="ordered; context: { items: items }"></ng-container>
+}
+@case (ListType.Unordered) {
+<ng-container *ngTemplateOutlet="unordered; context: { items: items }"></ng-container>
+}
+@default {
+<p>No type</p>
+}
 }
 
 <ng-template #ordered let-items="items">
   <ol>
     @for (item of items; track item.id) {
-      <li>{{ item.name }}</li>
+    <li>{{ item.name }}</li>
     }
   </ol>
 </ng-template>
@@ -21,7 +21,7 @@
 <ng-template #unordered let-items="items">
   <ul>
     @for (item of items; track item.id) {
-      <li>{{ item.name }}</li>
+    <li>{{ item.name }}</li>
     }
   </ul>
 </ng-template>

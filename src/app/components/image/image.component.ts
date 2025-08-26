@@ -1,15 +1,15 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core'
 
 @Component({
   selector: 'app-image',
   imports: [],
   templateUrl: './image.component.html',
-  styleUrl: './image.component.scss'
+  styleUrl: './image.component.scss',
 })
 export class ImageComponent {
   @Input()
-  src!: string;
+  src!: string
 
   @Input()
-  alt!: string;
+  alt!: string
 }
