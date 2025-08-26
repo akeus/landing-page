@@ -11,12 +11,12 @@ import { ListType } from '../../components/list-items/models/list-type.enum'
   styleUrl: './education.component.scss',
 })
 export class EducationComponent {
-  protected readonly ListType = ListType
-
   public collages: { id: number, name: string }[] = [
     { id: 1, name: 'A' },
     { id: 2, name: 'B' },
     { id: 3, name: 'C' },
     { id: 4, name: 'D' },
   ]
+
+  protected readonly ListType = ListType
 }
