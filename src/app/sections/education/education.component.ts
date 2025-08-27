@@ -1,22 +1,26 @@
 import { Component } from '@angular/core'
-import { ListItemsComponent } from '../../components/list-items/list-items.component'
-import { ListType } from '../../components/list-items/models/list-type.enum'
+import { College } from '@sections/education/models/college.model'
 
 @Component({
   selector: 'app-education',
-  imports: [
-    ListItemsComponent,
-  ],
   templateUrl: './education.component.html',
   styleUrl: './education.component.scss',
 })
 export class EducationComponent {
-  public collages: { id: number, name: string }[] = [
-    { id: 1, name: 'A' },
-    { id: 2, name: 'B' },
-    { id: 3, name: 'C' },
-    { id: 4, name: 'D' },
+  public collages: College[] = [
+    {
+      id: 2,
+      name: 'Harmon Hall',
+      career: 'Ingles A1 - B2',
+      start: '2025',
+      end: 'actualidad',
+    },
+    {
+      id: 1,
+      name: 'Universidad tecnologica de cancun',
+      career: 'Ingenieria en tecnologias de la informacion y telecomunicaciones',
+      start: '2011',
+      end: '2013',
+    },
   ]
-
-  protected readonly ListType = ListType
 }
