@@ -1,1 +1,37 @@
-<p>experience works!</p>
+<section id="work-experience" class="py-20">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4">Experiencia</h2>
+      <p class="text-xl text-base-content/70 max-w-2xl mx-auto">
+        Mas de 12 años construyendo soluciones de software inovadoras
+      </p>
+    </div>
+
+    <div class="space-y-8">
+      @for (work of workExperience; track work.id) {
+      <div class="card card-border bg-base-100 shadow-xl">
+        <div class="card-body">
+          <div class="flex flex-col gap-4">
+            <div class="flex-1">
+              <h3 class="card-title text-2xl text-primary mb-2">{{ work.position }}</h3>
+              <h4 class="text-xl font-semibold mb-3">{{ work.company }}</h4>
+
+              <div class="flex gap-4 mb-4 text-sm text-base-content/70">
+                <p class="">{{ work.from }} - {{ work.to }}</p>
+              </div>
+
+              <p *ngIf="work.summary" class="mb-4 leading-relaxed">{{ work.summary }}</p>
+
+              <div *ngIf="work.skills" class="flex gap-2">
+                @for (skill of work.skills; track skill) {
+                <span class="badge badge-soft badge-primary">{{ skill }}</span>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>
