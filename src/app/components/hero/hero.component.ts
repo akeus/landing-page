@@ -14,7 +14,7 @@ export class HeroComponent {
   public info: HeroInfoModel = {
     name: 'Miguel Angel Ake Us',
     title: 'Senior Software Engineer',
-    description: 'Soy ingeniero de software con mas de 12 años de experiencia en desarrollo de aplicaciones empresariales robustas usando tecnologías .NET Core y Angular. He diseñado arquitecturas escalables, implementado pipelines CI/CD, creado contenedores Docker y orquestación con Kubernetes. Apasionado por la mejora continua del código, revisión de buenas prácticas y optimización de procesos DevOps. He liderado proyectos en la nube, asegurando alta disponibilidad y calidad de software',
+    description: 'Ingeniero de software con experiencia en desarrollo de aplicaciones empresariales robustas usando tecnologías .NET Core y Angular. He diseñado arquitecturas escalables, implementado pipelines CI/CD, creado contenedores Docker y orquestación con Kubernetes. Apasionado por la mejora continua del código, revisión de buenas prácticas y optimización de procesos DevOps.',
     photo: {
       url: 'https://avatars.githubusercontent.com/u/16445740?v=4',
       alt: 'Miguel Angel Ake Us',
