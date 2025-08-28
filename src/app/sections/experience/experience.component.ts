@@ -152,7 +152,7 @@ export class ExperienceComponent {
       ],
     },
     {
-      id: 6,
+      id: 8,
       company: 'Megatera Solutions',
       position: 'Webmaster',
       from: 'Enero 2014',
@@ -171,7 +171,7 @@ export class ExperienceComponent {
       ],
     },
     {
-      id: 6,
+      id: 9,
       company: 'Publiherz',
       position: 'Programador JR.',
       from: 'Abril 2013',
