@@ -5,5 +5,9 @@ import { WorkExperienceModel } from '@sections/experience/models/work-experience
 export interface ProfileResponse {
   information: HeroInfoModel
   social: SocialLinksModel
-  experience: WorkExperienceModel[]
+  experience: {
+    title: string
+    subtitle: string
+    positions: WorkExperienceModel[]
+  }
 }

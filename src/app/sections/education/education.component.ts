@@ -4,7 +4,6 @@ import { College } from '@sections/education/models/college.model'
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
-  styleUrl: './education.component.scss',
 })
 export class EducationComponent {
   public collages: College[] = [

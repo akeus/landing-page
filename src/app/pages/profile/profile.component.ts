@@ -1,7 +1,8 @@
-import { Component } from '@angular/core'
+import { Component, inject } from '@angular/core'
 import { HeaderComponent } from '@sections/header/header.component'
 import { ExperienceComponent } from '@sections/experience/experience.component'
 import { HeroComponent } from '@components/hero/hero.component'
+import { ProfileService } from '@services/profile.service'
 
 @Component({
   selector: 'app-profile',
@@ -11,8 +12,7 @@ import { HeroComponent } from '@components/hero/hero.component'
     HeroComponent,
   ],
   templateUrl: './profile.component.html',
-  styleUrl: './profile.component.scss',
 })
 export class ProfileComponent {
-
+  public readonly profile = inject(ProfileService).getProfile()
 }

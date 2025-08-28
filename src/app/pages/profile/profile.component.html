@@ -1,7 +1,11 @@
 <div class="min-h-screen">
   <app-header></app-header>
   <main>
-    <app-hero></app-hero>
-    <app-experience></app-experience>
+    <app-hero [info]="profile.information" [social]="profile.social"></app-hero>
+    <app-experience
+      [title]="profile.experience.title"
+      [subtitle]="profile.experience.subtitle"
+      [workExperience]="profile.experience.positions"
+    ></app-experience>
   </main>
 </div>
