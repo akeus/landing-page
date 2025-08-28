@@ -9,6 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr": "node dist/miguel-ake-landing/server/server.mjs",
+    "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
     "prepare": "husky"
   },
