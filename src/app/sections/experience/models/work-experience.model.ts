@@ -5,6 +5,5 @@ export interface WorkExperience {
   from: string
   to: string
   summary?: string
-  tasks?: string[]
   skills?: string[]
 }
