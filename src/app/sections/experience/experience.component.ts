@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { WorkExperience } from '@sections/experience/models/work-experience.model'
+import { WorkExperienceModel } from '@sections/experience/models/work-experience.model'
 import { NgIf } from '@angular/common'
 
 @Component({
@@ -14,7 +14,7 @@ export class ExperienceComponent {
 
   public subtitle = 'Más de 11 años construyendo soluciones de software innovadoras.'
 
-  public workExperience: WorkExperience[] = [
+  public workExperience: WorkExperienceModel[] = [
     {
       id: 1,
       company: 'World2Meet',

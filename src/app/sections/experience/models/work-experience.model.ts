@@ -1,4 +1,4 @@
-export interface WorkExperience {
+export interface WorkExperienceModel {
   id: number
   company: string
   position: string
