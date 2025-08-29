@@ -1,0 +1,10 @@
+.angular
+.husky
+.idea
+.vscode
+node_modules
+.dockerignore
+.editorconfig
+.gitignore
+.npmrc
+README.md
