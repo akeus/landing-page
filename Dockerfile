@@ -2,7 +2,7 @@ FROM node:20-alpine AS build
 LABEL authors="Miguel Angel Ake Us"
 WORKDIR /app/src
 COPY package*.json ./
-RUN --mount=type=secret,id=npm_token && \
+RUN --mount=type=secret,id=npm_token \
     npm config set @akeus:registry https://npm.pkg.github.com && \
     npm config set //npm.pkg.github.com/:_authToken $(cat /run/secrets/npm_token) && \
     npm ci
