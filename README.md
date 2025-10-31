@@ -1,59 +1,53 @@
-# MiguelAkeLanding
+# Miguel Ake Landing
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+My personal page, all information that appears there, is on my LinkedIn.
 
-## Development server
+## Local development
 
-To start a local development server, run:
+Install dependencies
 
-```bash
-ng serve
+```shell
+npm install
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Run app
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```shell
+ng serve -o
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Publish docker image
 
-```bash
-ng generate --help
+### Build image
+
+First, we need to enable **Build Kit**, to do this we must go to `Config > Docker Engine` and add the following code.
+
+```json
+{
+  "features": {
+    "buildkit": true
+  }
+}
 ```
 
-## Building
+Run `docker build` with npm token for install dependencies
 
-To build the project run:
-
-```bash
-ng build
+```shell
+docker build 
+  --secret id=npm_token,src=<./path/file/with/secret.txt> 
+  --tag ghcr.io/akeus/landing-page:<version> .
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### Publish image
 
-## Running unit tests
+First, we need to add GitHub Registry in Docker, to do this we have to log in with our credentials.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```
+docker login ghcr.io -u akeus --password <secret>
 ```
 
-## Running end-to-end tests
+Send to registry
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
+```shell
+docker push ghcr.io/akeus/landing-page:<version>
 ```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
